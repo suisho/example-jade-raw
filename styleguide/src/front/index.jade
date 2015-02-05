@@ -1,6 +1,11 @@
-h2 Button
 
-.guide
-  h3 blue button
-  .example
-    .button Push this
+mixin tree(head)
+  for val, key in head
+    if key == '_contents'
+      each file in val
+        div
+          span #{file}
+    else
+      mixin tree(val)
+
+mixin tree(public)
