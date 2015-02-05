@@ -1,0 +1,23 @@
+@import "../scss/front/module";
+
+body{
+  font-family: "Helvetica";
+  padding: 50px 20px 0;
+  background: #f4f4f7;
+  color: #444;
+  margin: 0;
+}
+
+.styleguide{
+  header, footer{
+    text-align: center;
+  }
+  nav{
+    ul{
+      li{
+        display:block;
+        font-width: bold;
+      }
+    }
+  }
+}

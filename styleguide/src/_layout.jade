@@ -1,12 +1,17 @@
 doctype
 html
   head
-    link(rel="stylesheet" href="main.css")
-    link(rel="stylesheet" href="../scss/styleguide.css")
-  body
-    h1 Styleguide
-    nav
-      a(href="front/") Desktop
-      a(href="sp/") Mobile
+    link(rel="stylesheet" href="/main.css")
+    link(rel="stylesheet" href="/styleguide.css")
+  body.styleguide
+    header
+      h1 Styleguide
+      nav
+        ul
+          li: a(href="front/") Desktop
+          li: a(href="sp/") Mobile
     article
       != yield
+    footer
+      author suisho
+      

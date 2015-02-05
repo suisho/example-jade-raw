@@ -1,0 +1,13 @@
+.button{
+  $color :  #394cc2;
+  display : inline-block;
+  color : white;
+  padding : 1em;
+  border: 0px solid transparent;
+  border-radius: 10px;
+  background: $color;
+  cursor : pointer;
+  &:hover{
+    background: sturate($color, 30);
+  }
+}
