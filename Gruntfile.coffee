@@ -1,19 +1,35 @@
 module.exports = (grunt) ->
   grunt.initConfig
-    harp :
-      server :
-        server :true
-        source : 'styleguide/src'
-      dist :
-        source : 'styleguide/src'
-        dest : 'styleguide/build'
+    sass :
+      styleguide:
+        files : [
+          cwd : 'styleguide/src',
+          src : '**/*.scss'
+          dest : "build"
+        ]
+    jade :
+      styleguide:
+        options :
+          basedir : "./"
+        files : [
+          expand : ture,
+          cwd : "styleguide/src",
+          src : "**/*.jade",
+          dest : "build"
+        ]
+    connect:
+      styleguide:
+        options:
+          port : 1099
+          hostname : "*"
+          base : "styleguide/build"
     watch :
       dist:
         files : 'styleguide/src/'
-        tasks : ['harp:dist']
+        tasks : ['jade:dist']
       
-  grunt.loadNpmTasks 'grunt-harp'
-  grunt.loadNpmTasks 'grunt-contrib-watch'
-  grunt.registerTask "default", ["harp:dist", "harp:server"]
+  grunt.loadNpmTasks 'grunt-contrib-jade'
+  grunt.loadNpmTasks 'grunt-contrib-sass'
+  grunt.registerTask "default", ["sass:styleguide", "jade:stylegude"]
   
   
