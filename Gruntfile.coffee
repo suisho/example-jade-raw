@@ -7,7 +7,13 @@ module.exports = (grunt) ->
       dist :
         source : 'styleguide/src'
         dest : 'styleguide/build'
-  grunt.loadNpmTasks('grunt-harp')
-  grunt.registerTask "default", ["grunt-harp"]
+    watch :
+      dist:
+        files : 'styleguide/src/'
+        tasks : ['harp:dist']
+      
+  grunt.loadNpmTasks 'grunt-harp'
+  grunt.loadNpmTasks 'grunt-contrib-watch'
+  grunt.registerTask "default", ["harp:dist", "harp:server"]
   
   

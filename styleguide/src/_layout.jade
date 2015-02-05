@@ -1,6 +1,12 @@
 doctype
 html
   head
-    link(rel="stylesheet" href="/main.css")
+    link(rel="stylesheet" href="main.css")
+    link(rel="stylesheet" href="../scss/styleguide.css")
   body
-    != yield
+    h1 Styleguide
+    nav
+      a(href="front/") Desktop
+      a(href="sp/") Mobile
+    article
+      != yield
