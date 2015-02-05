@@ -16,6 +16,7 @@ module.exports = (grunt) ->
           cwd : "styleguide/src",
           src : "**/*.jade",
           dest : "styleguide/build"
+          ext : "html"
         ]
     connect:
       styleguide:
@@ -30,6 +31,6 @@ module.exports = (grunt) ->
       
   grunt.loadNpmTasks 'grunt-contrib-jade'
   grunt.loadNpmTasks 'grunt-contrib-sass'
-  grunt.registerTask "default", ["sass:styleguide", "jade:styleguide", "connect"]
+  grunt.registerTask "default", ["sass:styleguide", "jade:styleguide"]
   
   
