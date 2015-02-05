@@ -11,5 +11,8 @@
   "dependencies": {
     "grunt": "^0.4.5",
     "grunt-harp": "^0.1.4"
+  },
+  "devDependencies": {
+    "grunt-harp": "^0.1.4"
   }
 }
