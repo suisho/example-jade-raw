@@ -20,4 +20,17 @@ body{
       }
     }
   }
+  .guide{
+    padding : 1em;
+    border-bottom : 1px solid black;
+    .title{
+      border-bottom : 1px solid black;
+      margin-bottom : 1em;
+    }
+    .description, .example{
+      display : inline-block;
+      width: 50%;
+    }
+    
+  }
 }

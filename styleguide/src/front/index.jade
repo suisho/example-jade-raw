@@ -1,11 +1,21 @@
+mixin description
+  .description
+    block
 
-mixin tree(head)
-  for val, key in head
-    if key == '_contents'
-      each file in val
-        div
-          span #{file}
-    else
-      mixin tree(val)
+mixin example
+  .example
+    block
+    .code
+      pre: code: block
 
-mixin tree(public)
+mixin guide(title)
+  .guide
+    .title #{title}
+    block
+
++guide("Button")
+  +description
+    div blue-button - 説明文です
+  +example
+    .button Push this
+  
